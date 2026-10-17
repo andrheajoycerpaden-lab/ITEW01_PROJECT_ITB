@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>elvare | Reviews</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="index.html">elvare</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link active" href="reviews.html">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-light py-4 text-center border-bottom">
+    <h1>Our Customer Reviews</h1>
+    <p class="lead mb-0">See what our customers say, then share your own experience.</p>
+  </header>
+
+  <main class="container my-5">
+    <div class="row g-4">
+
+      <!-- REVIEW LIST -->
+      <div class="col-12 col-lg-7">
+        <h2 class="h4 mb-3">What People Say</h2>
+        <div class="row g-3" id="reviewList">
+          <!-- Hidden until a customer submits a review -->
+          <div class="col-12 col-md-6" id="newReview" style="display: none;">
+            <div class="card h-100 shadow-sm border-warning">
+              <div class="card-body">
+                <p class="text-warning mb-1" id="newRating"></p>
+                <p class="card-text" id="newMessage"></p>
+                <h6 class="card-subtitle text-muted" id="newName"></h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <p class="text-warning mb-1">★★★★★</p>
+                <p class="card-text">This is a great product! I love it.</p>
+                <h6 class="card-subtitle text-muted">— Sarah G.</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <p class="text-warning mb-1">★★★★☆</p>
+                <p class="card-text">Lovely bag and well-made. However, it arrived slightly damaged.</p>
+                <h6 class="card-subtitle text-muted">— Cuttie Patotie</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <p class="text-warning mb-1">★★★★★</p>
+                <p class="card-text">The tote bag is bigger than I expected. Great for school.</p>
+                <h6 class="card-subtitle text-muted">— Andrea B.</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- REVIEW FORM -->
+      <div class="col-12 col-lg-5">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="h4 mb-3">Write a Review</h2>
+            <div class="alert alert-success" id="reviewSuccess" style="display: none;">Thank you! Your review was added.</div>
+            <form id="reviewForm" novalidate>
+              <div class="mb-3">
+                <label for="reviewName" class="form-label">Your name</label>
+                <input type="text" class="form-control" id="reviewName" required>
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="mb-3">
+                <label for="reviewRating" class="form-label">Rating</label>
+                <select class="form-select" id="reviewRating" required>
+                  <option value="">Choose...</option>
+                  <option value="5">5 - Excellent</option>
+                  <option value="4">4 - Good</option>
+                  <option value="3">3 - Okay</option>
+                  <option value="2">2 - Poor</option>
+                  <option value="1">1 - Very poor</option>
+                </select>
+                <div class="invalid-feedback">Please choose a rating.</div>
+              </div>
+              <div class="mb-3">
+                <label for="reviewMessage" class="form-label">Your review</label>
+                <textarea class="form-control" id="reviewMessage" rows="4" minlength="10" required></textarea>
+                <div class="invalid-feedback">Please write at least 10 characters.</div>
+              </div>
+              <button type="submit" class="btn btn-dark w-100">Submit Review</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2026 elvare. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

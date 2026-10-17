@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>elvare | Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="index.html">elvare</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-light py-4 text-center border-bottom">
+    <h1>Contact Us</h1>
+  </header>
+
+  <main class="container my-5">
+    <div class="row g-4">
+
+      <!-- CONTACT INFORMATION -->
+      <div class="col-12 col-md-5">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h2 class="h4 mb-3">Company Information</h2>
+            <p class="mb-2"><strong>Address:</strong><br> Main Street, Cabuyao, Laguna, Philippines</p>
+            <p class="mb-2"><strong>Phone:</strong><br>1234 567 8991</p>
+            <p class="mb-2"><strong>Email:</strong><br>hello@elvare.com</p>
+            <p class="mb-0"><strong>Store hours:</strong><br>Monday to Saturday, 9:00 AM to 6:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT FORM -->
+      <div class="col-12 col-md-7">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="h4 mb-3">Send Us a Message</h2>
+
+            <!-- Hidden until the form is sent successfully -->
+            <div class="alert alert-success" id="contactSuccess" style="display: none;">
+              Thank you! Your message has been sent.
+            </div>
+
+            <form id="contactForm" novalidate>
+
+              <!-- First name and last name side by side -->
+              <div class="row g-3 mb-3">
+                <div class="col-12 col-md-6">
+                  <label for="contactFirstName" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="contactFirstName" required>
+                  <div class="invalid-feedback">Please enter your first name.</div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="contactLastName" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="contactLastName" required>
+                  <div class="invalid-feedback">Please enter your last name.</div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="contactEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="contactEmail" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+              <div class="mb-3">
+                <label for="contactSubject" class="form-label">Subject</label>
+                <input type="text" class="form-control" id="contactSubject" required>
+                <div class="invalid-feedback">Please enter a subject.</div>
+              </div>
+              <div class="mb-3">
+                <label for="contactMessage" class="form-label">Message</label>
+                <textarea class="form-control" id="contactMessage" rows="5" required></textarea>
+                <div class="invalid-feedback">Please write your message.</div>
+              </div>
+              <button type="submit" class="btn btn-dark w-100">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2026 elvare. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>elvare | Products</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="index.html">elvare</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="product.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item">
+            <!-- On this page, the Cart link opens the cart modal -->
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">Cart <span class="badge bg-warning text-dark" id="cartCount">0</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE TITLE -->
+  <header class="bg-light py-4 text-center border-bottom">
+    <h1>Our Products</h1>
+    <p class="lead mb-0">Pick your favorites and add them to your cart.</p>
+  </header>
+
+  <!-- PRODUCT LIST -->
+  <main class="container my-5">
+    <div class="row g-4">
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <div class="bg-light text-center fs-1"> <img src="3 (1).webp" alt="Emblem Logo Shoulder Bag" class="img-fluid"> </div>
+          <div class="card-body">
+            <h5 class="card-title">Emblem Logo Shoulder Bag</h5>
+            <p class="fw-bold">₱6,562.00</p>
+          </div>
+          <div class="card-footer bg-white border-0 pb-3">
+            <button class="btn btn-dark w-100" onclick="addToCart('Emblem Logo Shoulder Bag', 6562)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <div class="bg-light text-center fs-1"> <img src="2 (1).webp" alt="Allover Emblem Logo Tote Bag with Pouch" class="img-fluid"> </div>
+          <div class="card-body">
+            <h5 class="card-title">Allover Emblem Logo Tote Bag with Pouch</h5>
+            <p class="fw-bold">₱7,655.00</p>
+          </div>
+          <div class="card-footer bg-white border-0 pb-3">
+            <button class="btn btn-dark w-100" onclick="addToCart('Allover Emblem Logo Tote Bag with Pouch', 7655)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <div class="bg-light text-center fs-1"> <img src="4.webp" alt="Embossed Logo Convertible Mini Shoulder Bag" class="img-fluid"> </div>
+          <div class="card-body">
+            <h5 class="card-title">Embossed Logo Convertible Mini Shoulder Bag</h5>
+            <p class="fw-bold">₱3,982.00</p>
+          </div>
+          <div class="card-footer bg-white border-0 pb-3">
+            <button class="btn btn-dark w-100" onclick="addToCart('Embossed Logo Convertible Mini Shoulder Bag', 3982)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <div class="bg-light text-center fs-1"> <img src="5.webp" alt="Emblem Logo Small Shoulder Bag" class="img-fluid"> </div>
+          <div class="card-body">
+            <h5 class="card-title">Emblem Logo Small Shoulder Bag</h5>
+            <p class="fw-bold">₱5,241.00</p>
+          </div>
+          <div class="card-footer bg-white border-0 pb-3">
+            <button class="btn btn-dark w-100" onclick="addToCart('Emblem Logo Small Shoulder Bag', 5241)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <div class="bg-light text-center fs-1"> <img src="6.webp" alt="Minimal Monogram Small Shoulder Bag" class="img-fluid"> </div>
+          <div class="card-body">
+            <h5 class="card-title">Minimal Monogram Small Shoulder Bag</h5>
+            <p class="fw-bold">₱4,781.00</p>
+          </div>
+          <div class="card-footer bg-white border-0 pb-3">
+            <button class="btn btn-dark w-100" onclick="addToCart('Minimal Monogram Small Shoulder Bag', 4781)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <div class="bg-light text-center fs-1"> <img src="7.webp" alt="Monogram Embossed Mini Shoulder Bag" class="img-fluid"> </div>
+          <div class="card-body">
+            <h5 class="card-title">Monogram Embossed Mini Shoulder Bag</h5>
+            <p class="fw-bold">₱6,103.00</p>
+          </div>
+          <div class="card-footer bg-white border-0 pb-3">
+            <button class="btn btn-dark w-100" onclick="addToCart('Monogram Embossed Mini Shoulder Bag', 6103)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CART MODAL -->
+  <div class="modal fade" id="cartModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Your Shopping Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-1"><strong>Items:</strong></p>
+          <p id="cartItems">Your cart is empty.</p>
+          <h5>Total: ₱<span id="cartTotal">0</span></h5>
+          <p id="cartMessage" class="text-success fw-bold mb-0" style="display: none;"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" id="clearBtn">Clear Cart</button>
+          <button type="button" class="btn btn-success" id="checkoutBtn">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2026 elvare. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
